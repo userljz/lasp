@@ -1,7 +1,16 @@
 ftfy
 regex
+
 tqdm
-torch
-torchvision
+addict
+torch -f https://download.pytorch.org/whl/cu118
+torchvision -f https://download.pytorch.org/whl/cu118
+lightning
+wandb
+omegaconf
+hydra-core
+
+
 gdown
+
 git+https://github.com/KaiyangZhou/Dassl.pytorch.git

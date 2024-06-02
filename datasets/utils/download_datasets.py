@@ -75,8 +75,8 @@ def download_dataset(dataset_name, root="root"):
         call(f"wget http://www.robots.ox.ac.uk/~vgg/data/flowers/102/102flowers.tgz --output-document={root}/102flowers.tgz", shell=True)
         call(f"wget http://www.robots.ox.ac.uk/~vgg/data/flowers/102/imagelabels.mat --output-document={root}/imagelabels.mat", shell=True)
 
-        call(f"untar -xf {root}/102flowers.tgz", shell=True)
-        call(f"rm {root}/102flowers.tgz", shell=True)
+        call(f"tar -xf {root}/102flowers.tgz", shell=True)
+        # call(f"rm {root}/102flowers.tgz", shell=True)
 
         url = 'https://drive.google.com/uc?id=1AkcxCXeK_RCGCEC_GvmWxjcjaNhu-at0'
         gdown.download(url, f"{root}/cat_to_name.json", quiet=False)
@@ -129,7 +129,7 @@ def download_dataset(dataset_name, root="root"):
     else:
         raise Exception('Unknown dataset.')
     
-download_datasets(args.root)
+download_datasets(args.root, [args.dataset_name])
 
 
 

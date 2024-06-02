@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # custom config
-DATA=~/shared-fi-datasets-01/users/adrian.bulat/data/fs_datasets/
+DATA=/home/ljz/dataset
 TRAINER=LASP
 
 DATASET=$1
